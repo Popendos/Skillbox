@@ -27,9 +27,17 @@ public class MainArith {
     }
 
 
-    void number12(int number1, int number2) {
+    void add(int number1, int number2) {
         this.number1 = number1;
         this.number2 = number2;
+    }
+
+    public void print (){
+        System.out.println("Сумма: " + sum());
+        System.out.println("Умножение: " + mult());
+        System.out.println("большее число: " + comp());
+        System.out.println("меньшее число: " + comp2());
+
     }
 
 }
