@@ -1,58 +1,44 @@
 public class Printer {
 
-    private int stringQueue = 0;
-    private int getPendingPagesCount = 0;
-    private String text = "";
-    private String name = "";
-    private int pages = 0;
-    private int getPendingPagesCountAllTimes = 0;
-
-
+    private String queue = "";
+    private int pendingPagesCount = 0;
+    private int pendingPagesCountAllTime = 0;
 
 
     public void append(String text) {
-        stringQueue = stringQueue + 1;
-        this.text = text;
-
+        queue =queue + "\n" + " " + text;
     }
 
-    public void append(String text, String name) {
-        stringQueue = stringQueue + 1;
-        this.text = text;
-        this.name = name;
+    public void append(String text, String name){append(text);
+        queue = queue + "\n" + " " + name;
     }
 
-    public void append(String text, String name, int pages) {
-        stringQueue = stringQueue + 1;
-        this.text =this.text + text;
-        this.name =this.name + name;
-        this.pages =this.pages + pages;
-        getPendingPagesCount = getPendingPagesCount + pages;
-        getPendingPagesCountAllTimes = getPendingPagesCountAllTimes + pages;
+    public void append(String text, String name, int count) {append(text, name);
+
+        pendingPagesCount = pendingPagesCount + count;
+        pendingPagesCountAllTime = pendingPagesCountAllTime + count;
+    }
+
+    public int getPendingPagesCount () {
+        return pendingPagesCount;
+    }
+
+    public int getPendingPagesCountAllTime () {
+        return pendingPagesCountAllTime;
     }
 
     public void clear() {
-        stringQueue = 0;
+        queue = "";
+        pendingPagesCount = 0;
     }
-
-    public  int getPendingPagesCountAllTimes() {
-        return getPendingPagesCountAllTimes;
-    }
-
-    public int getPendingPagesCount() {
-        return getPendingPagesCount;
-    }
-
 
     public void print() {
-        if (stringQueue == 0 ) {
-            System.out.println("нет документов на печать");
+        if (queue.isEmpty()) {
+            System.out.println("Очередь печати пуста");
         } else {
-            System.out.println(text + name + pages);
-        } stringQueue = 0;
-        getPendingPagesCount = 0;
-
+            System.out.println(queue);
+        }
+        queue = "";
+        pendingPagesCount = 0;
     }
-
 }
-
