@@ -6,7 +6,11 @@ public class Main {
         basket.print("Milk");
 
         Basket basket1 = new Basket();
-        basket1.add("Мясо", 30, 3, 22);
+        basket1.add("Мясо", 30, 3);
         basket1.print("Мясо");
+
+        Basket basket2 = new Basket();
+        basket2.add("poplol", 25, 2, 2);
+        basket2.print("poplol");
     }
 }

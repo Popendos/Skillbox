@@ -5,7 +5,6 @@ public class PrinterMain {
         printer.append("lolpop", "lolpop", 12);
         System.out.println(printer.getPendingPagesCount());
         System.out.println(printer.getPendingPagesCountAllTimes());
-        printer.clear();
         printer.print();
         System.out.println(printer.getPendingPagesCount());
         System.out.println(printer.getPendingPagesCountAllTimes());

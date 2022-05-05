@@ -8,6 +8,8 @@ public class Printer {
     private int getPendingPagesCountAllTimes = 0;
 
 
+
+
     public void append(String text) {
         stringQueue = stringQueue + 1;
         this.text = text;
@@ -22,9 +24,9 @@ public class Printer {
 
     public void append(String text, String name, int pages) {
         stringQueue = stringQueue + 1;
-        this.text = text;
-        this.name = name;
-        this.pages = pages;
+        this.text =this.text + text;
+        this.name =this.name + name;
+        this.pages =this.pages + pages;
         getPendingPagesCount = getPendingPagesCount + pages;
         getPendingPagesCountAllTimes = getPendingPagesCountAllTimes + pages;
     }
