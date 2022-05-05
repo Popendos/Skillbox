@@ -65,6 +65,7 @@ public class Basket {
         add(name, price, count);
         totalWeight = totalWeight + weight * count;
         items = items + " " + weight;
+
     }
 
     public void clear() {

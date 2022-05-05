@@ -5,6 +5,7 @@ public class Main {
         basket.add("Milk", 40);
         basket.print("Milk");
 
+
         Basket basket1 = new Basket();
         basket1.add("Мясо", 30, 3);
         basket1.print("Мясо");
