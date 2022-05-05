@@ -10,7 +10,7 @@ public class Printer {
         queue = queue + "\n" + text + name;
 
         pendingPagesCount = pendingPagesCount + count;
-        pendingPagesCountAllTime = pendingPagesCountAllTime + count;
+
     }
 
     public void append(String text) {
@@ -44,6 +44,7 @@ public class Printer {
             System.out.println(queue);
         }
         queue = "";
+        pendingPagesCountAllTime = pendingPagesCountAllTime + pendingPagesCount;
         pendingPagesCount = 0;
     }
 }
