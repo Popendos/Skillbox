@@ -5,25 +5,30 @@ public class Printer {
     private int pendingPagesCountAllTime = 0;
 
 
-    public void append(String text) {
-        queue =queue + "\n" + " " + text;
-    }
+    public void append(String text, String name, int count) {
 
-    public void append(String text, String name){append(text);
-        queue = queue + "\n" + " " + name;
-    }
-
-    public void append(String text, String name, int count) {append(text, name);
+        queue = queue + "\n" + text + name;
 
         pendingPagesCount = pendingPagesCount + count;
         pendingPagesCountAllTime = pendingPagesCountAllTime + count;
     }
 
-    public int getPendingPagesCount () {
+    public void append(String text) {
+        append(text, "", 1);
+
+    }
+
+    public void append(String text, String name) {
+        append(text, name, 1);
+
+    }
+
+
+    public int getPendingPagesCount() {
         return pendingPagesCount;
     }
 
-    public int getPendingPagesCountAllTime () {
+    public int getPendingPagesCountAllTime() {
         return pendingPagesCountAllTime;
     }
 
