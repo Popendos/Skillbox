@@ -1,52 +1,56 @@
 public class Printer {
-    int StringQueue = 0;
-    int PendingPagesCount = 0;
-    String Items = "";
-    int AllStringQueue = 0;
+
+    private int stringQueue = 0;
+    private int getPendingPagesCount = 0;
+    private String text = "";
+    private String name = "";
+    private int pages = 0;
+    private int getPendingPagesCountAllTimes = 0;
+
+
+    public void append(String text) {
+        stringQueue = stringQueue + 1;
+        this.text = text;
+
+    }
+
+    public void append(String text, String name) {
+        stringQueue = stringQueue + 1;
+        this.text = text;
+        this.name = name;
+    }
+
+    public void append(String text, String name, int pages) {
+        stringQueue = stringQueue + 1;
+        this.text = text;
+        this.name = name;
+        this.pages = pages;
+        getPendingPagesCount = getPendingPagesCount + pages;
+        getPendingPagesCountAllTimes = getPendingPagesCountAllTimes + pages;
+    }
+
+    public void clear() {
+        stringQueue = 0;
+    }
+
+    public  int getPendingPagesCountAllTimes() {
+        return getPendingPagesCountAllTimes;
+    }
 
     public int getPendingPagesCount() {
-        return PendingPagesCount;
-    }
-
-    public int getStringQueue() {
-        return StringQueue;
-    }
-
-    public String print() {
-        return Items;
-
+        return getPendingPagesCount;
     }
 
 
-    public void append1(String text) {
-        StringQueue = StringQueue + 1;
-        Items = Items + "\n" + "Текст: " + text;
-        AllStringQueue = AllStringQueue + 1;
+    public void print() {
+        if (stringQueue == 0 ) {
+            System.out.println("нет документов на печать");
+        } else {
+            System.out.println(text + name + pages);
+        } stringQueue = 0;
+        getPendingPagesCount = 0;
 
-
-    }
-
-    public void append2(String text, String name) {
-        StringQueue = StringQueue + 1;
-        Items = Items + "\n" + "Текст: " + text + "; Имя: " + name;
-        AllStringQueue = AllStringQueue + 1;
-
-
-    }
-
-    public void append3(String text, String name, int pages) {
-        Items = Items + "\n" + "Текст: " + text + "; Имя: " + name + "; Количетсво страниц: " + pages;
-        StringQueue = StringQueue + 1;
-        PendingPagesCount = PendingPagesCount + pages;
-        AllStringQueue = AllStringQueue + 1;
-
-
-    }
-
-
-    void clear() {
-        StringQueue = 0;
-        PendingPagesCount = 0;
     }
 
 }
+
