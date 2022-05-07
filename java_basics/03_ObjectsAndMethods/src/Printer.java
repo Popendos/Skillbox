@@ -1,52 +1,50 @@
 public class Printer {
-    int StringQueue = 0;
-    int PendingPagesCount = 0;
-    String Items = "";
-    int AllStringQueue = 0;
+
+    private String queue = "";
+    private int pendingPagesCount = 0;
+    private int pendingPagesCountAllTime = 0;
+
+
+    public void append(String text, String name, int count) {
+
+        queue = queue + "\n" + text + name;
+
+        pendingPagesCount = pendingPagesCount + count;
+
+    }
+
+    public void append(String text) {
+        append(text, "", 1);
+
+    }
+
+    public void append(String text, String name) {
+        append(text, name, 1);
+
+    }
+
 
     public int getPendingPagesCount() {
-        return PendingPagesCount;
+        return pendingPagesCount;
     }
 
-    public int getStringQueue() {
-        return StringQueue;
+    public int getPendingPagesCountAllTime() {
+        return pendingPagesCountAllTime;
     }
 
-    public String print() {
-        return Items;
-
+    public void clear() {
+        queue = "";
+        pendingPagesCount = 0;
     }
 
-
-    public void append1(String text) {
-        StringQueue = StringQueue + 1;
-        Items = Items + "\n" + "Текст: " + text;
-        AllStringQueue = AllStringQueue + 1;
-
-
+    public void print() {
+        if (queue.isEmpty()) {
+            System.out.println("Очередь печати пуста");
+        } else {
+            System.out.println(queue);
+        }
+        queue = "";
+        pendingPagesCountAllTime = pendingPagesCountAllTime + pendingPagesCount;
+        pendingPagesCount = 0;
     }
-
-    public void append2(String text, String name) {
-        StringQueue = StringQueue + 1;
-        Items = Items + "\n" + "Текст: " + text + "; Имя: " + name;
-        AllStringQueue = AllStringQueue + 1;
-
-
-    }
-
-    public void append3(String text, String name, int pages) {
-        Items = Items + "\n" + "Текст: " + text + "; Имя: " + name + "; Количетсво страниц: " + pages;
-        StringQueue = StringQueue + 1;
-        PendingPagesCount = PendingPagesCount + pages;
-        AllStringQueue = AllStringQueue + 1;
-
-
-    }
-
-
-    void clear() {
-        StringQueue = 0;
-        PendingPagesCount = 0;
-    }
-
 }
