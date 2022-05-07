@@ -26,14 +26,19 @@ public class Elevator {
 
     public void move(int floor) {
 
-        if (floor > maxFloor || floor < minFloor) {
-
+        if (floor > maxFloor || floor < minFloor){
             System.out.println("Неверный этаж");
-        } else if (floor < currentFloor) {
-            moveDown();
-        } else {
-            moveUp();
         }
-    }
 
+        for (int i = floor; i > currentFloor && i <= maxFloor; moveUp()) {
+
+        }
+
+
+        for (int j = floor; j < currentFloor && j >= minFloor; moveDown()) {
+
+        }
+
+    }
 }
+
