@@ -1,10 +1,10 @@
 public class Elevator {
 
-    public int currentFloor = 1;
-    public int minFloor = 0;
-    public int maxFloor = 0;
+    private int currentFloor = 1;
+    private int minFloor = 0;
+    private int maxFloor = 0;
 
-    public void Elevator(int minFloor, int maxFloor) {
+    public Elevator(int minFloor, int maxFloor) {
         this.maxFloor = maxFloor;
         this.minFloor = minFloor;
 
@@ -30,13 +30,14 @@ public class Elevator {
             System.out.println("Неверный этаж");
         }
 
-        for (int i = floor; i > currentFloor && i <= maxFloor; moveUp()) {
+        for (int i = floor; i > currentFloor && i <= maxFloor;) {
+            moveUp();
 
         }
 
 
-        for (int j = floor; j < currentFloor && j >= minFloor; moveDown()) {
-
+        for (int j = floor; j < currentFloor && j >= minFloor;) {
+            moveDown();
         }
 
     }
