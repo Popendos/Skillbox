@@ -1,4 +1,4 @@
-public class InfoOGruzah {
+public class Storage {
 
     private final Dimensions dimensions;
     private final int weight;
@@ -8,7 +8,7 @@ public class InfoOGruzah {
 
 
 
-    public InfoOGruzah(Dimensions dimensions, int weight, String address, boolean rotate, String regNumber) {
+    public Storage(Dimensions dimensions, int weight, String address, boolean rotate, String regNumber) {
         this.dimensions = dimensions;
         this.weight = weight;
         this.address = address;
@@ -16,24 +16,24 @@ public class InfoOGruzah {
         this.regNumber = regNumber;
     }
 
-    public InfoOGruzah setPloshad(Dimensions dimensions) {
-        return new InfoOGruzah(dimensions, weight, address, rotate, regNumber);
+    public Storage setPloshad(Dimensions dimensions) {
+        return new Storage(dimensions, weight, address, rotate, regNumber);
     }
 
-    public InfoOGruzah setWeight(int weight) {
-        return new InfoOGruzah(dimensions, weight, address, rotate, regNumber);
+    public Storage setWeight(int weight) {
+        return new Storage(dimensions, weight, address, rotate, regNumber);
     }
 
-    public InfoOGruzah setAddress(String address) {
-        return new InfoOGruzah(dimensions, weight, address, rotate, regNumber);
+    public Storage setAddress(String address) {
+        return new Storage(dimensions, weight, address, rotate, regNumber);
     }
 
-    public InfoOGruzah setRotate(boolean rotate) {
-        return new InfoOGruzah(dimensions, weight, address, rotate, regNumber);
+    public Storage setRotate(boolean rotate) {
+        return new Storage(dimensions, weight, address, rotate, regNumber);
     }
 
-    public InfoOGruzah setRegNumber(String regNumber) {
-        return new InfoOGruzah(dimensions, weight, address, rotate, regNumber);
+    public Storage setRegNumber(String regNumber) {
+        return new Storage(dimensions, weight, address, rotate, regNumber);
     }
 
     public int getWeight() {
