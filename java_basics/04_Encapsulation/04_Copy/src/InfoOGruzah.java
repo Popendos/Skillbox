@@ -1,6 +1,6 @@
 public class InfoOGruzah {
 
-    private final Dimensions ploshad;
+    private final Dimensions dimensions;
     private final int weight;
     private final String address;
     private final boolean rotate;
@@ -8,8 +8,8 @@ public class InfoOGruzah {
 
 
 
-    public InfoOGruzah(Dimensions ploshad, int weight, String address, boolean rotate, String regNumber) {
-        this.ploshad = ploshad;
+    public InfoOGruzah(Dimensions dimensions, int weight, String address, boolean rotate, String regNumber) {
+        this.dimensions = dimensions;
         this.weight = weight;
         this.address = address;
         this.rotate = rotate;
@@ -21,19 +21,19 @@ public class InfoOGruzah {
     }
 
     public InfoOGruzah setWeight(int weight) {
-        return new InfoOGruzah(ploshad, weight, address, rotate, regNumber);
+        return new InfoOGruzah(dimensions, weight, address, rotate, regNumber);
     }
 
     public InfoOGruzah setAddress(String address) {
-        return new InfoOGruzah(ploshad, weight, address, rotate, regNumber);
+        return new InfoOGruzah(dimensions, weight, address, rotate, regNumber);
     }
 
     public InfoOGruzah setRotate(boolean rotate) {
-        return new InfoOGruzah(ploshad, weight, address, rotate, regNumber);
+        return new InfoOGruzah(dimensions, weight, address, rotate, regNumber);
     }
 
     public InfoOGruzah setRegNumber(String regNumber) {
-        return new InfoOGruzah(ploshad, weight, address, rotate, regNumber);
+        return new InfoOGruzah(dimensions, weight, address, rotate, regNumber);
     }
 
     public int getWeight() {
@@ -54,7 +54,7 @@ public class InfoOGruzah {
 
 
     public String toString() {
-        return "объем: " + ploshad.math() + "\n" + "Вес: " + weight + "\n" + "Адрес: " + address + "\n" + "Можно ли переварачивать? " + (rotate ? "да" : "нет") + "\n" + "Регситрационный номер: " + regNumber;
+        return "объем: " + dimensions.math() + "\n" + "Вес: " + weight + "\n" + "Адрес: " + address + "\n" + "Можно ли переварачивать? " + (rotate ? "да" : "нет") + "\n" + "Регситрационный номер: " + regNumber;
     }
 
 
