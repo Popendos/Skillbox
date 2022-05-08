@@ -22,10 +22,8 @@ public class Dimensions {
         return new Dimensions(length, height, width);
     }
 
-    public int math() {
-        int math;
-        math = length * height * width;
-        return math;
+    public int getVolume() {
+        return length * height * width;
     }
 
 }

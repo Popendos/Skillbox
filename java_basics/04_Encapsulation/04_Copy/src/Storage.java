@@ -54,7 +54,7 @@ public class Storage {
 
 
     public String toString() {
-        return "объем: " + dimensions.math() + "\n" + "Вес: " + weight + "\n" + "Адрес: " + address + "\n" + "Можно ли переварачивать? " + (rotate ? "да" : "нет") + "\n" + "Регситрационный номер: " + regNumber;
+        return "объем: " + dimensions.getVolume() + "\n" + "Вес: " + weight + "\n" + "Адрес: " + address + "\n" + "Можно ли переварачивать? " + (rotate ? "да" : "нет") + "\n" + "Регситрационный номер: " + regNumber;
     }
 
 
