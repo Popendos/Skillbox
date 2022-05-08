@@ -7,12 +7,8 @@ public class Main {
         System.out.println(ploshad1.math());
         InfoOGruzah infoOGruzah = new InfoOGruzah(ploshad, 23, "222", false, "222ff");
         System.out.println(infoOGruzah);
-
-
-
-
-
-
+        InfoOGruzah infoOGruzah1 = infoOGruzah.setAddress("dddd");
+        System.out.println(infoOGruzah1);
 
 
     }

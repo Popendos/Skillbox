@@ -4,11 +4,6 @@ public class Ploshad {
     private final int width;
 
 
-
-
-
-
-
     public Ploshad(int length, int height, int width) {
         this.length = length;
         this.height = height;

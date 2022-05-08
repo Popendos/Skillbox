@@ -7,6 +7,7 @@ public class InfoOGruzah {
     private final String regNumber;
 
 
+
     public InfoOGruzah(Ploshad ploshad, int weight, String address, boolean rotate, String regNumber) {
         this.ploshad = ploshad;
         this.weight = weight;
@@ -51,8 +52,9 @@ public class InfoOGruzah {
         return regNumber;
     }
 
+
     public String toString() {
-        return "объем: " + ploshad.math() + "\n" + "Вес: " + weight + "\n" + "Адрес: " + address + "\n" + "Можно ли переварачивать? " + rotate + "\n" + "Регситрационный номер: " + regNumber;
+        return "объем: " + ploshad.math() + "\n" + "Вес: " + weight + "\n" + "Адрес: " + address + "\n" + "Можно ли переварачивать? " + (rotate ? "да" : "нет") + "\n" + "Регситрационный номер: " + regNumber;
     }
 
 
