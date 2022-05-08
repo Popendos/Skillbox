@@ -1,6 +1,6 @@
 public class InfoOGruzah {
 
-    private final Ploshad ploshad;
+    private final Dimensions ploshad;
     private final int weight;
     private final String address;
     private final boolean rotate;
@@ -8,7 +8,7 @@ public class InfoOGruzah {
 
 
 
-    public InfoOGruzah(Ploshad ploshad, int weight, String address, boolean rotate, String regNumber) {
+    public InfoOGruzah(Dimensions ploshad, int weight, String address, boolean rotate, String regNumber) {
         this.ploshad = ploshad;
         this.weight = weight;
         this.address = address;
@@ -16,8 +16,8 @@ public class InfoOGruzah {
         this.regNumber = regNumber;
     }
 
-    public InfoOGruzah setPloshad(Ploshad ploshad) {
-        return new InfoOGruzah(ploshad, weight, address, rotate, regNumber);
+    public InfoOGruzah setPloshad(Dimensions dimensions) {
+        return new InfoOGruzah(dimensions, weight, address, rotate, regNumber);
     }
 
     public InfoOGruzah setWeight(int weight) {
