@@ -28,7 +28,7 @@ public class Basket {
 
     }
 
-    public static int getAllTotalPrice() {
+    public static double getAllTotalPrice() {
         return allTotalPrice;
     }
 
@@ -100,11 +100,11 @@ public class Basket {
         totalWeight = 0;
     }
 
-    public static int getAvaragePriceItems() {
+    public static double getAvaragePriceItems() {
         return Basket.getAllTotalPrice() / Basket.getAllItems();
     }
 
-    public static int getAvaragePriceBasket() {
+    public static double getAvaragePriceBasket() {
         return Basket.getAllTotalPrice() / Basket.getCount();
     }
 
