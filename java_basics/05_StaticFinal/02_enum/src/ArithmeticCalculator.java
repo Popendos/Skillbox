@@ -1,8 +1,8 @@
 public class ArithmeticCalculator {
 
-    public final int number1;
-    public final int number2;
-    public final Operation type;
+    private final int number1;
+    private final int number2;
+    private final Operation type;
 
 
     public ArithmeticCalculator(int number1, int number2, Operation type) {
@@ -13,7 +13,7 @@ public class ArithmeticCalculator {
     }
 
 
-    public int calculate(Operation type) {
+    public int calculate() {
         if (type == Operation.ADD) {
             return number1 + number2;
         }
