@@ -1,14 +1,17 @@
 public class ArithmeticCalculator {
 
-    public int number1 = 0;
-    public int number2 = 0;
+    public final int number1;
+    public final int number2;
+    public final Operation type;
 
 
-    public ArithmeticCalculator(int number1, int number2) {
+    public ArithmeticCalculator(int number1, int number2, Operation type) {
         this.number1 = number1;
         this.number2 = number2;
+        this.type = type;
 
     }
+
 
     public int calculate(Operation type) {
         if (type == Operation.ADD) {
