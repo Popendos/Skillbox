@@ -42,6 +42,7 @@ public class GeometryCalculator {
     // методом isTrianglePossible, если невозможен вернуть -1.0
     public static double getTriangleSquare(double a, double b, double c) {
         double p;
+
         double S;
         if (trianglePossible = true) {
             p = (a + b + c) / 2;
