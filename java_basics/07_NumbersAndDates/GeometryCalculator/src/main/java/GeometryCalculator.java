@@ -1,56 +1,61 @@
+import java.math.BigInteger;
+
 public class GeometryCalculator {
 
     private static double S;
     private static double V;
     private static boolean trianglePossible;
+    private static double p;
 
     // метод должен использовать абсолютное значение radius
     public static double getCircleSquare(double radius) {
-        if (radius > 0) {
-            S = Math.PI * Math.pow(radius, 2);
-            System.out.println("Площадь круга = " + S);
-        } else {
-            System.out.println("Радиус меньше нуля");
+        Math.abs(radius);
+        S = Math.PI * Math.pow(radius, 2);
+        System.out.println(S);
 
-
-        }
-        return 0;
+        return S;
     }
 
 
     // метод должен использовать абсолютное значение radius
     public static double getSphereVolume(double radius) {
-        if (radius > 0) {
-            V = (double) (4 / 3) * Math.PI * Math.pow(radius, 3);
-            System.out.println("Объем шара равен: " + V);
-        } else {
-            System.out.println("Радиус меньше нуля");
-        }
-        return 0;
+
+        BigInteger integer1 = new BigInteger("4");
+        BigInteger integer2 = new BigInteger("3");
+
+
+
+            V =  (integer1.doubleValue() / integer2.doubleValue()) * Math.PI * Math.pow(radius, 3);
+            System.out.println(V);
+
+
+        return Math.abs(V);
     }
 
     public static boolean isTrianglePossible(double a, double b, double c) {
         if ((a + b) > c && (a + c) > b && (b + c) > a) {
             trianglePossible = true;
-            System.out.println("Возможно построить");
+            System.out.println(trianglePossible);
+        } else {
+            trianglePossible = false;
+            System.out.println(trianglePossible);
 
-        } else System.out.println("Невозможно построить такой треугольник");
-        return false;
+        }  return trianglePossible;
     }
+
 
     // перед расчетом площади рекомендуется проверить возможен ли такой треугольник
     // методом isTrianglePossible, если невозможен вернуть -1.0
     public static double getTriangleSquare(double a, double b, double c) {
-        double p;
 
-        double S;
-        if (trianglePossible = true) {
+        if (isTrianglePossible(a, b, c)) {
             p = (a + b + c) / 2;
             S = Math.sqrt(p * (p - a) * (p - b) * (p - c));
             System.out.println(S);
 
 
-        } else System.out.println("Невозможно построить такой треугольник");
-        return -1;
+
+        } else return -1.0;
+        return S;
     }
 }
