@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 import practice.regex.SplitText;
 
 @DisplayName("Разбивка текста")
-public class TestSplitText {
+class SplitTextTests {
 
   public static final String EMPTY_STRING = "";
 

@@ -23,7 +23,7 @@ import org.junit.jupiter.api.Test;
 import practice.regex.PhoneCleanerRegex;
 
 @DisplayName("Очистка номера и приведение к российскому формату")
-class TestPhoneCleanerRegex {
+class PhoneCleanerRegexTests {
 
   /**
    * in/out streams to swap System in out

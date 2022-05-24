@@ -35,40 +35,22 @@ cache:
     reports:
       junit:
         - target/surefire-reports/TEST-*.xml
-  allow_failure: false 
-   
-Strings-EarningsCalculator:
-  extends: .test-jobs
-  script:
-    - 'mvn -Dtest="strings/TestEarningsCalculator.java" test'
+  allow_failure: false
 
-Strings-FullNameFormatter:
+String-SequentialWordsNumbers:
   extends: .test-jobs
   script:
-    - 'mvn -Dtest="strings/TestNameFormatter.java" test'
-
-Regex-EarningsCalculator:
-  extends: .test-jobs
-  script:
-    - 'mvn -Dtest="regex/TestEarningsCalculatorRegex.java" test'
+    - 'mvn -Dtest="string/SequentialWordsNumbersTests.java" test'
 
 Regex-SplitText:
   extends: .test-jobs
   script:
-    - 'mvn -Dtest="regex/TestSplitText.java" test'
-
-Regex-FullNameFormatter:
-  extends: .test-jobs
-  script:
-    - 'mvn -Dtest="regex/TestNameFormatterRegex.java" test'
+    - 'mvn -Dtest="regex/SplitTextTests.java" test'
 
 Regex-PhoneCleaner:
   extends: .test-jobs
   script:
-    - 'mvn -Dtest="regex/TestPhoneCleanerRegex.java" test'
-
-
-
+    - 'mvn -Dtest="regex/PhoneCleanerRegexTests.java" test'
 
 codestyle:
   extends: .maven-jobs

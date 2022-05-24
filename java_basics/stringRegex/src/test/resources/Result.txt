@@ -27,14 +27,12 @@ to
 return
 in
 the
-s
 forty
 years
 old
 people
 prefer
 the
-s
 It
 can
 be
@@ -48,7 +46,7 @@ they
 were
 younger
 As
-it’s
+its
 known
 people
 like
@@ -65,7 +63,7 @@ We
 live
 when
 there
-aren’t
+arent
 as
 many
 wars
@@ -189,7 +187,7 @@ and
 to
 get
 education
-It’s
+Its
 better
 to
 think

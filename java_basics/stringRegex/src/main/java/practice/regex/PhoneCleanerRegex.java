@@ -13,7 +13,8 @@ public class PhoneCleanerRegex {
         scanner.close();
         break;
       }
-      //TODO:напишите ваш код тут, результат вывести в консоль.
+
+      // TODO:напишите ваш код тут, результат вывести в консоль.
     }
   }
 
